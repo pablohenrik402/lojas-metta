@@ -1,4 +1,4 @@
-# Lojas Metta
+# 🚗 Lojas Metta
 
 E-commerce moderno de peças automotivas desenvolvido com Next.js 14, React, TypeScript e Tailwind CSS.
 
@@ -6,8 +6,11 @@ E-commerce moderno de peças automotivas desenvolvido com Next.js 14, React, Typ
 
 - ✨ Interface moderna e responsiva
 - 🛒 Catálogo de produtos com categorias
-- 🔍 Sistema de busca de peças
+- 🔍 Sistema de busca e filtros
+- 📄 Páginas detalhadas de produtos
 - 📱 Design mobile-first
+- 📞 Formulário de contato funcional
+- ℹ️ Página sobre a empresa
 - ⚡ Performance otimizada com Next.js 14
 - 🎨 Estilização com Tailwind CSS
 
@@ -44,9 +47,14 @@ npm run dev
 ```
 lojas-metta/
 ├── app/                    # Páginas Next.js (App Router)
-│   ├── layout.tsx         # Layout principal
-│   ├── page.tsx           # Página inicial
-│   └── globals.css        # Estilos globais
+│   ├── categorias/        # Página de categorias
+│   ├── contato/           # Página de contato
+│   ├── produtos/          # Catálogo e detalhes
+│   │   └── [id]/         # Produto individual
+│   ├── sobre/            # Sobre a empresa
+│   ├── layout.tsx        # Layout principal
+│   ├── page.tsx          # Página inicial
+│   └── globals.css       # Estilos globais
 ├── components/            # Componentes React
 │   ├── Header.tsx         # Cabeçalho
 │   ├── Footer.tsx         # Rodapé
@@ -54,17 +62,28 @@ lojas-metta/
 │   ├── Categories.tsx     # Categorias de produtos
 │   ├── FeaturedProducts.tsx # Produtos em destaque
 │   └── ProductCard.tsx    # Card de produto
-├── public/                # Arquivos estáticos
-├── next.config.js         # Configuração Next.js
-├── tailwind.config.ts     # Configuração Tailwind
-└── package.json           # Dependências
+├── types/                 # Tipos TypeScript
+│   └── index.ts          # Interfaces e tipos
+├── public/               # Arquivos estáticos
+├── next.config.js        # Configuração Next.js
+├── tailwind.config.ts    # Configuração Tailwind
+└── package.json          # Dependências
 ```
+
+## 📱 Páginas
+
+1. **Home (/)** - Página inicial com destaques
+2. **Produtos (/produtos)** - Catálogo completo com filtros
+3. **Produto Individual (/produtos/[id])** - Detalhes do produto
+4. **Categorias (/categorias)** - Navegação por categorias
+5. **Sobre (/sobre)** - História e valores da empresa
+6. **Contato (/contato)** - Formulário de contato
 
 ## 🎨 Paleta de Cores
 
-- **Primary (Vermelho):** #e63946
-- **Secondary (Azul):** #1d3557
-- **Accent (Claro):** #f1faee
+- **Primary (Vermelho):** #e63946 - Botões e destaques
+- **Secondary (Azul):** #1d3557 - Textos e header
+- **Accent (Claro):** #f1faee - Fundos e contraste
 
 ## 📝 Scripts Disponíveis
 
@@ -74,6 +93,15 @@ npm run build    # Cria build de produção
 npm run start    # Inicia servidor de produção
 npm run lint     # Executa linter
 ```
+
+## 🔄 Próximas Melhorias
+
+- [ ] Implementar carrinho de compras funcional
+- [ ] Adicionar autenticação de usuários
+- [ ] Integrar com API de pagamento
+- [ ] Adicionar sistema de busca avançada
+- [ ] Implementar avaliações de produtos
+- [ ] Criar painel administrativo
 
 ## 🤝 Contribuindo
 

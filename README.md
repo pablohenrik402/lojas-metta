@@ -113,9 +113,9 @@ Este projeto é privado e de propriedade da Lojas Metta.
 
 ## 📞 Contato
 
-- **Email:** contato@lojasmetta.com
-- **Telefone:** (11) 1234-5678
-- **WhatsApp:** (11) 98765-4321
+- **Email:** sac@lojasmetta.com
+- **Telefone:** (13) 3434-5678
+- **WhatsApp:** (13) 98657-9173
 
 ---
 

@@ -1,50 +1,41 @@
 import Link from 'next/link'
-import { FaCar, FaOilCan, FaCogs, FaBolt, FaTools, FaTachometerAlt } from 'react-icons/fa'
+import {
+  FaTools,
+  FaLightbulb,
+  FaCog,
+  FaCouch,
+  FaHeartbeat,
+  FaFish,
+  FaHome,
+  FaMicrochip,
+  FaBoxOpen,
+} from 'react-icons/fa'
+import { products } from '@/data/products'
 
-const categories = [
-  { 
-    name: 'Motor', 
-    icon: FaCogs, 
-    count: 150,
-    description: 'Peças e componentes para motor',
-    subcategories: ['Filtros', 'Velas', 'Correias', 'Bombas']
-  },
-  { 
-    name: 'Suspensão', 
-    icon: FaCar, 
-    count: 89,
-    description: 'Amortecedores e componentes',
-    subcategories: ['Amortecedores', 'Molas', 'Buchas', 'Bandejas']
-  },
-  { 
-    name: 'Freios', 
-    icon: FaTachometerAlt, 
-    count: 120,
-    description: 'Sistema de frenagem completo',
-    subcategories: ['Pastilhas', 'Discos', 'Tambores', 'Fluidos']
-  },
-  { 
-    name: 'Elétrica', 
-    icon: FaBolt, 
-    count: 200,
-    description: 'Componentes elétricos e eletrônicos',
-    subcategories: ['Baterias', 'Alternadores', 'Cabos', 'Sensores']
-  },
-  { 
-    name: 'Lubrificantes', 
-    icon: FaOilCan, 
-    count: 45,
-    description: 'Óleos e fluidos automotivos',
-    subcategories: ['Óleo Motor', 'Óleo Câmbio', 'Aditivos', 'Graxas']
-  },
-  { 
-    name: 'Ferramentas', 
-    icon: FaTools, 
-    count: 78,
-    description: 'Ferramentas profissionais',
-    subcategories: ['Kits', 'Chaves', 'Alicates', 'Scanners']
-  },
-]
+const categoryIcons: Record<string, any> = {
+  Iluminação: FaLightbulb,
+  Acessórios: FaTools,
+  Arrefecimento: FaCog,
+  Interior: FaCouch,
+  'Bem-estar': FaHeartbeat,
+  Pesca: FaFish,
+  Casa: FaHome,
+  Tecnologia: FaMicrochip,
+  Diversos: FaBoxOpen,
+}
+
+const categories = Array.from(
+  products.reduce((map, product) => {
+    const current = map.get(product.category)
+    map.set(product.category, (current ?? 0) + 1)
+    return map
+  }, new Map<string, number>())
+).map(([name, count]) => ({
+  name,
+  count,
+  icon: categoryIcons[name] ?? FaBoxOpen,
+  description: 'Produtos disponíveis nesta categoria',
+}))
 
 export default function CategoriasPage() {
   return (
@@ -78,20 +69,6 @@ export default function CategoriasPage() {
                 </div>
                 
                 <p className="text-gray-700 mb-4">{category.description}</p>
-                
-                <div className="border-t border-gray-200 pt-4">
-                  <p className="text-sm font-semibold text-gray-600 mb-2">Subcategorias:</p>
-                  <div className="flex flex-wrap gap-2">
-                    {category.subcategories.map((sub) => (
-                      <span 
-                        key={sub} 
-                        className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm group-hover:bg-primary group-hover:text-white transition-colors"
-                      >
-                        {sub}
-                      </span>
-                    ))}
-                  </div>
-                </div>
                 
                 <div className="mt-4 text-primary font-semibold flex items-center">
                   Ver produtos

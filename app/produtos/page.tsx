@@ -2,75 +2,10 @@
 
 import { useState } from 'react'
 import ProductCard from '@/components/ProductCard'
+import { products } from '@/data/products'
 import { FaFilter, FaSortAmountDown } from 'react-icons/fa'
 
-const products = [
-  {
-    id: 1,
-    name: 'Filtro de Óleo Premium',
-    price: 45.90,
-    image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=500',
-    category: 'Motor',
-  },
-  {
-    id: 2,
-    name: 'Pastilha de Freio Dianteira',
-    price: 89.90,
-    image: 'https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=500',
-    category: 'Freios',
-  },
-  {
-    id: 3,
-    name: 'Bateria 60Ah',
-    price: 389.90,
-    image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=500',
-    category: 'Elétrica',
-  },
-  {
-    id: 4,
-    name: 'Amortecedor Traseiro',
-    price: 245.90,
-    image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=500',
-    category: 'Suspensão',
-  },
-  {
-    id: 5,
-    name: 'Óleo Motor 5W30 Sintético',
-    price: 65.90,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500',
-    category: 'Lubrificantes',
-  },
-  {
-    id: 6,
-    name: 'Kit Ferramentas 100 Peças',
-    price: 199.90,
-    image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=500',
-    category: 'Ferramentas',
-  },
-  {
-    id: 7,
-    name: 'Disco de Freio Ventilado',
-    price: 159.90,
-    image: 'https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=500',
-    category: 'Freios',
-  },
-  {
-    id: 8,
-    name: 'Vela de Ignição NGK',
-    price: 24.90,
-    image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=500',
-    category: 'Motor',
-  },
-  {
-    id: 9,
-    name: 'Mola Helicoidal',
-    price: 129.90,
-    image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=500',
-    category: 'Suspensão',
-  },
-]
-
-const categories = ['Todos', 'Motor', 'Suspensão', 'Freios', 'Elétrica', 'Lubrificantes', 'Ferramentas']
+const categories = ['Todos', ...Array.from(new Set(products.map((product) => product.category)))]
 
 export default function ProdutosPage() {
   const [selectedCategory, setSelectedCategory] = useState('Todos')

@@ -1,13 +1,39 @@
-import { FaCar, FaOilCan, FaCogs, FaBolt, FaTools, FaTachometerAlt } from 'react-icons/fa'
+import {
+  FaTools,
+  FaLightbulb,
+  FaCog,
+  FaCouch,
+  FaHeartbeat,
+  FaFish,
+  FaHome,
+  FaMicrochip,
+  FaBoxOpen,
+} from 'react-icons/fa'
+import { products } from '@/data/products'
 
-const categories = [
-  { name: 'Motor', icon: FaCogs, count: 150 },
-  { name: 'Suspensão', icon: FaCar, count: 89 },
-  { name: 'Freios', icon: FaTachometerAlt, count: 120 },
-  { name: 'Elétrica', icon: FaBolt, count: 200 },
-  { name: 'Lubrificantes', icon: FaOilCan, count: 45 },
-  { name: 'Ferramentas', icon: FaTools, count: 78 },
-]
+const categoryIcons: Record<string, any> = {
+  Iluminação: FaLightbulb,
+  Acessórios: FaTools,
+  Arrefecimento: FaCog,
+  Interior: FaCouch,
+  'Bem-estar': FaHeartbeat,
+  Pesca: FaFish,
+  Casa: FaHome,
+  Tecnologia: FaMicrochip,
+  Diversos: FaBoxOpen,
+}
+
+const categories = Array.from(
+  products.reduce((map, product) => {
+    const current = map.get(product.category)
+    map.set(product.category, (current ?? 0) + 1)
+    return map
+  }, new Map<string, number>())
+).map(([name, count]) => ({
+  name,
+  count,
+  icon: categoryIcons[name] ?? FaBoxOpen,
+}))
 
 export default function Categories() {
   return (

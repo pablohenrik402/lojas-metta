@@ -119,4 +119,4 @@ Este projeto é privado e de propriedade da Lojas Metta.
 
 ---
 
-Desenvolvido com ❤️ para Lojas Metta
+Desenvolvido com ❤️ por Pablo H. Bento

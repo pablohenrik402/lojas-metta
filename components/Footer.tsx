@@ -47,19 +47,19 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-center gap-2">
                 <FaPhone className="text-primary" />
-                <span>(11) 1234-5678</span>
+                <span>(13) 99657-9173</span>
               </li>
               <li className="flex items-center gap-2">
                 <FaWhatsapp className="text-primary" />
-                <span>(11) 98765-4321</span>
+                <span>(13) 99657-9173</span>
               </li>
               <li className="flex items-center gap-2">
                 <FaEnvelope className="text-primary" />
-                <span>contato@lojasmetta.com</span>
+                <span>sac@lojasmetta.com.br</span>
               </li>
               <li className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-primary" />
-                <span>São Paulo, SP</span>
+                <span>Avenida Paulista, 1636 - Bela Vista, São Paulo - SP</span>
               </li>
             </ul>
           </div>

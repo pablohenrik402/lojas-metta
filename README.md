@@ -113,9 +113,11 @@ Este projeto é privado e de propriedade da Lojas Metta.
 
 ## 📞 Contato
 
-- **Email:** sac@lojasmetta.com
-- **Telefone:** (13) 3434-5678
-- **WhatsApp:** (13) 98657-9173
+- **Email:** sac@lojasmetta.com.br
+- **Telefone:** (13) 99657-9173
+- **WhatsApp:** (13) 99657-9173
+- **CNPJ:** 32.436.885/0002-43
+- **Endereço:** Avenida Paulista, 1636 - Conj 4 Pavimento 15 - Cond Paulista Corporate, Bela Vista - São Paulo/SP - CEP: 01310-200
 
 ---
 

@@ -9,7 +9,7 @@ import {
   FaMicrochip,
   FaBoxOpen,
 } from 'react-icons/fa'
-import { products } from '@/data/products'
+import { mockProducts } from '@/data/products'
 
 const categoryIcons: Record<string, any> = {
   Iluminação: FaLightbulb,
@@ -24,7 +24,7 @@ const categoryIcons: Record<string, any> = {
 }
 
 const categories = Array.from(
-  products.reduce((map, product) => {
+  mockProducts.reduce((map, product) => {
     const current = map.get(product.category)
     map.set(product.category, (current ?? 0) + 1)
     return map

@@ -2,18 +2,18 @@
 
 import { useState } from 'react'
 import ProductCard from '@/components/ProductCard'
-import { products } from '@/data/products'
+import { mockProducts } from '@/data/products'
 import { FaFilter, FaSortAmountDown } from 'react-icons/fa'
 
-const categories = ['Todos', ...Array.from(new Set(products.map((product) => product.category)))]
+const categories = ['Todos', ...Array.from(new Set(mockProducts.map((product) => product.category)))]
 
 export default function ProdutosPage() {
   const [selectedCategory, setSelectedCategory] = useState('Todos')
   const [sortBy, setSortBy] = useState('relevancia')
 
   const filteredProducts = selectedCategory === 'Todos'
-    ? products
-    : products.filter(p => p.category === selectedCategory)
+    ? mockProducts
+    : mockProducts.filter(p => p.category === selectedCategory)
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     if (sortBy === 'menor-preco') return a.price - b.price

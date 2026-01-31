@@ -59,7 +59,7 @@ export default function ContatoPage() {
               <FaPhone size={24} />
             </div>
             <h3 className="font-bold text-lg mb-2">Telefone</h3>
-            <p className="text-gray-600">(11) 1234-5678</p>
+            <p className="text-gray-600">(13) 99657-9173</p>
             <p className="text-gray-600">Seg-Sex: 8h às 18h</p>
           </div>
 
@@ -68,7 +68,7 @@ export default function ContatoPage() {
               <FaWhatsapp size={24} />
             </div>
             <h3 className="font-bold text-lg mb-2">WhatsApp</h3>
-            <p className="text-gray-600">(11) 98765-4321</p>
+            <p className="text-gray-600">(13) 99657-9173</p>
             <p className="text-gray-600">Atendimento 24h</p>
           </div>
 
@@ -77,7 +77,7 @@ export default function ContatoPage() {
               <FaEnvelope size={24} />
             </div>
             <h3 className="font-bold text-lg mb-2">E-mail</h3>
-            <p className="text-gray-600">contato@lojasmetta.com</p>
+            <p className="text-gray-600">sac@lojasmetta.com.br</p>
             <p className="text-gray-600">Resposta em até 24h</p>
           </div>
         </div>
@@ -210,9 +210,10 @@ export default function ContatoPage() {
                   <div>
                     <h3 className="font-semibold mb-1">Loja Física</h3>
                     <p className="text-gray-600">
-                      Rua das Peças, 123<br />
-                      Centro - São Paulo, SP<br />
-                      CEP: 01234-567
+                      Avenida Paulista, 1636<br />
+                      Conj 4 Pavimento 15 - Cond Paulista Corporate<br />
+                      Bela Vista - São Paulo, SP<br />
+                      CEP: 01310-200
                     </p>
                   </div>
                 </div>

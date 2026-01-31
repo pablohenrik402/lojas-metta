@@ -5,11 +5,11 @@ import { useMemo, useState } from 'react'
 import Image from 'next/image'
 import { FaStar, FaShoppingCart, FaMinus, FaPlus, FaTruck, FaShieldAlt, FaUndo } from 'react-icons/fa'
 import Link from 'next/link'
-import { products } from '@/data/products'
+import { mockProducts } from '@/data/products'
 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const product = useMemo(
-    () => products.find((item) => item.id === params.id),
+    () => mockProducts.find((item) => item.id === params.id),
     [params.id]
   )
 
@@ -28,7 +28,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   }
 
   const relatedProducts = useMemo(
-    () => products.filter((item) => item.category === product.category && item.id !== product.id).slice(0, 6),
+    () => mockProducts.filter((item) => item.category === product.category && item.id !== product.id).slice(0, 6),
     [product.category, product.id]
   )
 
